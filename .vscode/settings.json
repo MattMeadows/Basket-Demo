@@ -1,0 +1,19 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "eslint.options": {
+    "extensions": [".ts", ".js", ".tsx", ".jsx"]
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

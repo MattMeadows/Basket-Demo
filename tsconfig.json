@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
+    "moduleResolution": "node",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@layout/*": ["components/layout/*"],
+      "@global/*": ["components/global/*"],
+      "@templates/*": ["components/templates/*"],
+      "@organisms/*": ["components/organisms/*"],
+      "@molecules/*": ["components/molecules/*"],
+      "@atoms/*": ["components/atoms/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
