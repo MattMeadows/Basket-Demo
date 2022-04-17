@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { FC } from "react";
+import { Props } from "./type";
 
-const Overlay: FC = () => (
+const Overlay: FC<Props> = ({ onClick, className }: Props) => (
   <motion.div
+    {...(onClick ? { onClick } : {})}
     animate={{ opacity: 1 }}
-    className="fixed inset-0 bg-black bg-opacity-40 z-10"
+    className={`${className} fixed inset-0 bg-black bg-opacity-40 z-10`}
     exit={{ opacity: 0 }}
     initial={{ opacity: 0 }}
     transition={{

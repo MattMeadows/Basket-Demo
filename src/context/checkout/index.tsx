@@ -1,4 +1,5 @@
-import { createContext, useReducer, useContext } from "react";
+import { createContext, useReducer, useContext, useEffect } from "react";
+import { json } from "stream/consumers";
 import { reducer, initialState } from "./reducer";
 import { Props, CheckoutDataContextValues } from "./type";
 
@@ -10,7 +11,20 @@ export const useCheckoutContext = createContext<CheckoutDataContextValues>({
 const { Provider } = useCheckoutContext;
 
 export const CheckoutProvider = ({ children, ...props }: Props) => {
-  const [checkoutData, setCheckoutData] = useReducer(reducer, initialState);
+  const [checkoutData, setCheckoutData] = useReducer(
+    reducer,
+    initialState,
+    () => {
+      const localData = localStorage.getItem("cart");
+      return localData
+        ? { initialState, cartItems: JSON.parse(localData) }
+        : initialState;
+    }
+  );
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(checkoutData.cartItems));
+  }, [checkoutData]);
 
   return (
     <Provider value={{ checkoutData, setCheckoutData }} {...props}>

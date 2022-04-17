@@ -28,7 +28,8 @@
           ["@templates", "./src/components/templates"],
           ["@organisms", "./src/components/organisms"],
           ["@molecules", "./src/components/molecules"],
-          ["@atoms", "./src/components/atoms"]
+          ["@atoms", "./src/components/atoms"],
+          ["@context", "./src/context"]
         ],
         "extensions": [".ts", ".tsx", ".js", ".jsx", ".json"]
       }

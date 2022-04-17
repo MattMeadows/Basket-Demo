@@ -1,21 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ProductCards from "@molecules/product-cards";
 import Layout from "@layout/layout";
 import ErrorBoundary from "@global/ErrorBoundary";
 import Page from "@templates/page";
 
-import products from "../products";
+import { CheckoutProvider } from "./context/checkout";
 
 const App = () => {
-  console.log(products);
   return (
-    <ErrorBoundary>
-      <Page>
-        <Layout>
-          <ProductCards products={products} />
-        </Layout>
-      </Page>
-    </ErrorBoundary>
+    <CheckoutProvider>
+      <ErrorBoundary>
+        <Page>
+          <Layout>
+            <ProductCards />
+          </Layout>
+        </Page>
+      </ErrorBoundary>
+    </CheckoutProvider>
   );
 };
 

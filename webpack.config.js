@@ -40,6 +40,7 @@ module.exports = {
       "@organisms": path.resolve(__dirname, "src/components/organisms/"),
       "@molecules": path.resolve(__dirname, "src/components/molecules/"),
       "@atoms": path.resolve(__dirname, "src/components/atoms/"),
+      "@context": path.resolve(__dirname, "src/context/"),
     },
   },
   plugins: [

@@ -17,7 +17,7 @@ const Primary: FC<ButtonType> = ({
     <button
       onClick={(evt) => onClick(evt)}
       type="button"
-      className={`${className} rounded-md w-full py-3 flex justify-center items-center bg-black border border-black text-white hover:bg-white hover:border-white hover:text-black transition-colors`}
+      className={`${className} rounded-md w-full py-3 flex justify-center items-center  border border-black text-black hover:bg-black  hover:text-white transition-colors`}
       {...rest}
     >
       <span className={iconLeft ? `order-last` : `order-first`}>
@@ -25,7 +25,7 @@ const Primary: FC<ButtonType> = ({
       </span>
       {icon && (
         <Icon
-          className={iconLeft ? `mr-5 order-first` : `ml-5 order-last`}
+          className={iconLeft ? `mr-3 order-first` : `ml-3 order-last`}
           icon={icon}
           size="xs"
         />

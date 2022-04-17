@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 
-type ButtonTypes = "primary" | "secondary" | "icon";
+type ButtonTypes = "primary" | "secondary" | "icon" | "round";
 
 export interface ButtonType
   extends DetailedHTMLProps<
