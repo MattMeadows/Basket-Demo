@@ -1,11 +1,10 @@
 import { createContext, useReducer, useContext, useEffect } from "react";
-import { json } from "stream/consumers";
 import { reducer, initialState } from "./reducer";
 import { Props, CheckoutDataContextValues } from "./type";
 
 export const useCheckoutContext = createContext<CheckoutDataContextValues>({
   checkoutData: initialState,
-  setCheckoutData: () => {},
+  setCheckoutData: () => null,
 });
 
 const { Provider } = useCheckoutContext;

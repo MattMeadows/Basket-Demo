@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import { Props, State } from "./types";
+import { Props, State } from './types';
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {

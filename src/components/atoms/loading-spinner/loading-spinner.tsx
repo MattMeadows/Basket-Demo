@@ -2,10 +2,7 @@ import { motion } from "framer-motion";
 import { FC } from "react";
 import { Props } from "./type";
 
-const LoadingSpinner: FC<Props> = ({
-  className,
-  color = "slate-800",
-}: Props) => (
+const LoadingSpinner: FC<Props> = ({ className }: Props) => (
   <div className={`${className} flex items-center justify-center w-full py-5`}>
     <motion.div
       animate="end"
@@ -27,7 +24,7 @@ const LoadingSpinner: FC<Props> = ({
       {new Array(3).fill(null).map((item: null, index: number) => (
         <motion.span
           key={index}
-          className={`block h-5 bg-slate-500 rounded-full w-5 mx-2`}
+          className="block h-5 bg-slate-500 rounded-full w-5 mx-2"
           transition={{
             duration: 0.5,
             repeat: Infinity,

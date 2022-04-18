@@ -1,11 +1,11 @@
 import React, { FC } from "react";
-import { Props } from "./type";
 import { Button } from "@components/atoms";
 import { useCheckoutDataContext } from "@context/checkout";
 import { ReducerIds } from "@context/checkout/type";
+import { Props } from "./type";
 
 const BasketItem: FC<Props> = ({ name, image, qty, price, id }: Props) => {
-  const { checkoutData, setCheckoutData } = useCheckoutDataContext();
+  const { setCheckoutData } = useCheckoutDataContext();
 
   return (
     <div className="grid grid-cols-3 py-5 md:px-5 gap-5 border-b-2 border-slate-100">
@@ -36,7 +36,8 @@ const BasketItem: FC<Props> = ({ name, image, qty, price, id }: Props) => {
         <div className="flex flex-row items-end pt-3">
           <div className="flex w-full items-center">
             <Button
-              buttonType="round"
+              className="rounded-full border border-black hover:bg-black hover:text-white"
+              buttonType="icon"
               icon="minus"
               onClick={() =>
                 setCheckoutData({
@@ -44,10 +45,11 @@ const BasketItem: FC<Props> = ({ name, image, qty, price, id }: Props) => {
                   payload: { id },
                 })
               }
-            ></Button>
+            />
             <span className="px-2">{qty}</span>
             <Button
-              buttonType="round"
+              className="rounded-full border border-black hover:bg-black hover:text-white"
+              buttonType="icon"
               icon="plus"
               onClick={() =>
                 setCheckoutData({
@@ -55,7 +57,7 @@ const BasketItem: FC<Props> = ({ name, image, qty, price, id }: Props) => {
                   payload: { id },
                 })
               }
-            ></Button>
+            />
           </div>
           <span>{`£${(qty * price).toFixed(2)}`}</span>
         </div>

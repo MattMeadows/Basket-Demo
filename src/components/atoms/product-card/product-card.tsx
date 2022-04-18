@@ -1,13 +1,13 @@
 import React, { FC } from "react";
-import { ProductProps } from "./type";
 import Button from "@components/atoms/button";
 import { useCheckoutDataContext } from "@context/checkout";
 import { ReducerIds } from "@context/checkout/type";
+import { ProductProps } from "./type";
 
 const ProductCard: FC<ProductProps> = (props: ProductProps) => {
-  const { id, name, price, description, image } = props;
+  const { name, price, description, image } = props;
 
-  const { checkoutData, setCheckoutData } = useCheckoutDataContext();
+  const { setCheckoutData } = useCheckoutDataContext();
 
   return (
     <div className="flex flex-col p-5 bg-white shadow-lg  transition-all">

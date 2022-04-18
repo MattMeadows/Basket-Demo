@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
-import { FC } from "react";
-import { Props } from "./type";
+import { motion } from 'framer-motion';
+import { FC } from 'react';
+import { Props } from './type';
 
 const Overlay: FC<Props> = ({ onClick, className }: Props) => (
   <motion.div
@@ -14,7 +14,7 @@ const Overlay: FC<Props> = ({ onClick, className }: Props) => (
       duration: 0.4,
       mass: 0.8,
       stiffness: 100,
-      type: "spring",
+      type: 'spring',
     }}
   />
 );

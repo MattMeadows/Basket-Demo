@@ -1,12 +1,11 @@
-import React, { FC } from "react";
-import { Button } from "@components/atoms";
-import { useCheckoutDataContext } from "@context/checkout";
-import { Basket } from "@components/organisms";
-import { Overlay } from "@components/atoms";
+import React, { FC } from 'react';
+import { Button, Overlay } from '@components/atoms';
+import { useCheckoutDataContext } from '@context/checkout';
+import { Basket } from '@components/organisms';
 
-import { ReducerIds } from "@context/checkout/type";
-import { AnimatePresence, motion } from "framer-motion";
-import { Props } from "./type";
+import { ReducerIds } from '@context/checkout/type';
+import { AnimatePresence, motion } from 'framer-motion';
+import { Props } from './type';
 
 const Minicart: FC<Props> = ({ className }: Props) => {
   const { checkoutData, setCheckoutData } = useCheckoutDataContext();

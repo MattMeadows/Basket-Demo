@@ -1,12 +1,12 @@
-import React, { FC } from "react";
-import iconSet from "./selection.json";
-import IcoMoon from "react-icomoon";
-import { IconType, IconSizes } from "./type";
+import { FC } from 'react';
+import IcoMoon from 'react-icomoon';
+import iconSet from './selection.json';
+import { IconType, IconSizes } from './type';
 
 const Icon: FC<IconType> = ({
   icon,
   size,
-  className = "",
+  className = '',
   rotate = 0,
   color,
   ...props
