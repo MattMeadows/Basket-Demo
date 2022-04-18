@@ -10,10 +10,10 @@ const ProductCard: FC<ProductProps> = (props: ProductProps) => {
   const { checkoutData, setCheckoutData } = useCheckoutDataContext();
 
   return (
-    <div className="flex flex-col border-2 rounded-md p-5">
+    <div className="flex flex-col p-5 bg-white shadow-lg  transition-all">
       <img src={image?.src} alt={image?.alt} />
-      <strong className="text-xl mb-5">{name}</strong>
-      <p>{`£ ${price.toFixed(2)}`}</p>
+      <strong className="text-xl">{name}</strong>
+      <p className="mb-3">{`£ ${price.toFixed(2)}`}</p>
       <p className="mb-5">{description}</p>
       <Button
         buttonType="primary"

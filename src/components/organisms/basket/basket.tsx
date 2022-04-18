@@ -11,14 +11,14 @@ const Basket: FC<Props> = ({ cartItems }: Props) => {
 
   if (cartItems.length === 0) {
     return (
-      <div className="fixed p-5 border right-0 top-0 h-screen bg-white w-2/3 lg:w-1/4 text-center">
+      <div className="fixed p-5 border right-0 top-0 h-screen bg-white w-3/4 md:w-2/4 lg:w-1/3 xl:w-1/4 text-center">
         <strong>You have no items in your shopping basket.</strong>
       </div>
     );
   }
 
   return (
-    <div className="fixed flex flex-col px-5 border right-0 top-0 h-screen bg-white w-3/4 lg:w-1/4 overflow-y-scroll">
+    <div className="fixed flex flex-col px-5 border right-0 top-0 h-screen bg-white w-3/4 md:w-2/4 lg:w-1/3 xl:w-1/4 overflow-y-scroll">
       <>
         {cartItems.length > 0 ? (
           <>

@@ -7,7 +7,7 @@ interface Props {
 
 const Layout: FC<Props> = ({ children, className }: Props) => (
   <div className="bg-slate-100">
-    <section className={`${className} container mx-auto px-5`}>
+    <section className={`${className} max-w-7xl mx-auto px-5`}>
       {children}
     </section>
   </div>

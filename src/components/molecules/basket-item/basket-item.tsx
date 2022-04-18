@@ -8,7 +8,7 @@ const BasketItem: FC<Props> = ({ name, image, qty, price, id }: Props) => {
   const { checkoutData, setCheckoutData } = useCheckoutDataContext();
 
   return (
-    <div className="grid grid-cols-3 p-5 gap-5 border-b-2 border-slate-100">
+    <div className="grid grid-cols-3 py-5 md:px-5 gap-5 border-b-2 border-slate-100">
       <div className="col-span-1">
         <img
           src={image.src}

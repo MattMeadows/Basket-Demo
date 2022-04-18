@@ -19,7 +19,7 @@ const Round: FC<ButtonType> = ({
     <button
       onClick={(evt) => onClick(evt)}
       type="button"
-      className={`${className} rounded-full p-1 flex justify-center items-center border border-black text-white bg-black  transition-colors`}
+      className={`${className} rounded-full flex justify-center items-center border border-black text-black hover:bg-black hover:text-white  transition-colors`}
       {...rest}
     >
       <Icon icon={icon} size={size} color={color} />
