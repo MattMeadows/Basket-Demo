@@ -30,9 +30,10 @@ yarn build
 
 Once the application has been built,
 
+install [serve](https://www.npmjs.com/package/serve)
+
 ```
-cd /dist
-http-server
+npx serve -s ./dist
 ```
 
 ### Folder Structure
