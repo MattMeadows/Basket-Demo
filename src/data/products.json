@@ -5,7 +5,7 @@
     "description": "Stilton has a beautiful interior, streaked like marble, and the texture is crumbly and almost soft - relatively delicate compared to its stout and bold flavours.",
     "image": {
       "alt": "Stilton Cheese",
-      "src": "assets/Stilton.png"
+      "src": "./assets/Stilton.png"
     }
   },
   {

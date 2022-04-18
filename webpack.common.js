@@ -2,12 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
   entry: path.join(__dirname, "src", "index.tsx"),
-  output: {
-    filename: "main.bundle.js",
-    path: path.resolve(__dirname, "dist"),
-  },
   module: {
     rules: [
       {
@@ -22,11 +17,22 @@ module.exports = {
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        loader: "file-loader",
-        options: {
-          name: "/public/assets/[name].[ext]",
+        test: /\.html$/,
+        use: ["html-loader"],
+      },
+      {
+        test: /\.(svg|png|gif|jpeg)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name].[ext]",
+            outputPath: "assets",
+          },
         },
+      },
+      {
+        test: /\.png$/,
+        loader: "url-loader",
       },
     ],
   },

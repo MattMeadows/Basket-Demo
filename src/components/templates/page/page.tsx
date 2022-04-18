@@ -9,8 +9,8 @@ const Page = ({ children }) => {
   const fetchProducts = async () => {
     try {
       setCheckoutData({ type: ReducerIds.FETCH_PRODUCTS_START });
-      const getResults = await fetch("../products.json").then((res) =>
-        res.json()
+      const getResults = await fetch("../../../data/products.json").then(
+        (res) => res.json()
       );
       const products = await getResults;
 
