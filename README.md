@@ -6,7 +6,13 @@ Install nodejs & yarn using a stable version `node 16.13.2` is functional at the
 
 ## Getting Started
 
-The application is built webpack configs and makes use of Typescript for type checking components
+The application is built with:
+
+- Webpack
+- React
+- React Context & Localstorage
+- Typescript
+- Tailwind CSS
 
 From the root of the project run:
 
